@@ -1,0 +1,23 @@
+.s-title {
+	font-size: 60px;
+	line-height: 70px;
+	font-family: $catamaran-black;
+	color: $white;
+	text-transform: uppercase;
+	letter-spacing: 0.6px;
+
+	@include desktop {
+		font-size: 48px;
+	}
+
+	@include laptop {
+		font-size: 36px;
+	}
+
+	@include tablet {
+		line-height: 40px;
+	}
+	@include phablet {
+		font-size: 24px;
+	}
+}

@@ -1,0 +1,240 @@
+.header {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	min-height: 700px;
+
+	overflow: hidden;
+	background-color: $header-bg;
+
+	@include phablet {
+		min-height: 500px;
+	}
+
+	& .container {
+		z-index: 5;
+		height: 100%;
+	}
+
+	&__circle {
+		content: '';
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		display: block;
+		transform: translateX(-50%);
+		border-radius: 50%;
+		box-shadow: 10px 20px 250px 250px rgba(#5ea8ce, .7);
+		filter: blur(1vw);
+
+		@include phablet {
+			box-shadow: 10px 20px 150px 150px rgba(94, 168, 206, 0.7);
+		}
+	}
+
+	&__top-line {
+		width: 100%;
+		max-width: 1710px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: 18px;
+		padding-right: 15px;
+		padding-left: 15px;
+		background-color: transparent;
+	}
+
+	&__message {
+		margin-top: 6.5vh;
+		margin-bottom: 11vh;
+		padding: 0 15px;
+		font-family: $catamaran-black;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include phablet {
+			margin-top: 40px;
+			margin-bottom: 5.5vh;
+		}
+	}
+
+	&__directions {
+		font-size: 30px;
+		color: $white;
+		background: linear-gradient(90deg, rgba(78, 131, 186, 1) 0%, rgba(46, 144, 201, 1) 24%, rgba(122, 200, 245, 1) 51%, rgba(46, 144, 201, 1) 73%, rgba(70, 121, 181, 1) 100%);
+		letter-spacing: 1.5px;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+
+		@include phablet {
+			font-size: 18px;
+			letter-spacing: 0;
+		}
+	}
+
+	&__title {
+		margin-top: 2.4vh;
+		font-size: 250px;
+		line-height: 233px;
+		color: $white;
+		background: linear-gradient(90deg, rgba(78, 131, 186, 1) 0%, rgba(46, 144, 201, 1) 24%, rgba(122, 200, 245, 1) 51%, rgba(46, 144, 201, 1) 73%, rgba(70, 121, 181, 1) 100%);
+		letter-spacing: -12.94px;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+
+		@include desktop {
+			font-size: 190px;
+			line-height: 1;
+			letter-spacing: -8.94px;
+		}
+
+		@include laptop {
+			font-size: 150px;
+			letter-spacing: -6.94px;
+		}
+
+		@include tablet {
+			font-size: 100px;
+			letter-spacing: -2.94px;
+		}
+
+		@include tablet-small {
+			font-size: 50px;
+			letter-spacing: 0;
+		}
+	}
+
+	&__boarder,
+	&__mountains,
+	&__heel,
+	&__bootom {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: block;
+		background-repeat: no-repeat;
+		background-position: center;
+		pointer-events: none;
+		background-size: cover;
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__mountains,
+	&__heel,
+	&__bootom {
+		left: 0;
+		left: -100px;
+		width: calc(100vw + 200px);
+	}
+
+	&__mountains {
+		z-index: 1;
+		height: 64vh;
+		min-height: 440px;
+		background-image: url(../images/general/header/mountains.png);
+		background-position: top;
+	}
+
+	&__heel {
+		z-index: 2;
+		height: 330px;
+		background-image: url(../images/general/header/heel.png);
+	}
+
+	&__bootom {
+		z-index: 3;
+		height: 100px;
+		background-image: linear-gradient(to top, #f7f7f7 0%, #f8fafa 92%, #f8fafa 100%);
+		transform: translateY(6px);
+		box-shadow: 0px -15px 28px 5px rgba(255, 255, 255, 1);
+		filter: blur(2px);
+	}
+
+	&__boarder {
+		right: 145px;
+		bottom: 42px;
+		z-index: 4;
+		width: 860px;
+		height: 560px;
+		background-image: url(../images/general/header/boarder.png);
+
+		@include desktop {
+			right: 0;
+			bottom: 32px;
+			width: 660px;
+			height: 460px;
+		}
+	}
+
+	&__composition {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: none;
+		display: block;
+		z-index: 4;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		transform: translateY(1px);
+		pointer-events: none;
+		background-size: cover;
+
+		@include tablet {
+			height: 340px;
+			background-image: url(../images/general/header/composition.png);
+		}
+	}
+
+	&__desc {
+		position: relative;
+		z-index: 6 !important;
+		max-width: 658px;
+
+		@include desktop {
+			max-width: 558px;
+		}
+
+		@include tablet {
+			max-width: 458px;
+		}
+
+		@include phablet {
+			max-width: 358px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 5vh;
+		font-size: 24px;
+		line-height: 36px;
+		font-family: $Multi-Regular;
+		color: $white;
+
+		@include tablet {
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+		@include phablet {
+			font-size: 16px;
+			line-height: 25px;
+		}
+
+		@include phone-wide {
+			margin-bottom: 0;
+		}
+	}
+
+	&__btn {
+		font-size: 18px;
+
+		@include tablet {
+			font-size: 16px;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+mixin card(addClass, img, mod, directions, title)
+	div(class="card " + addClass)
+		.card__img
+			+icon(img,mod)
+		.card__block
+			span.card__directions= directions
+			h2.card__title= title
+		a(href="#").card__btn.btn.btn--small from $<span class="price">250</span>

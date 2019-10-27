@@ -1,0 +1,43 @@
+.btn {
+	border-radius: 6px;
+	background-color: $current-color;
+	color: $white;
+	display: inline-block;
+	text-transform: uppercase;
+	transition: background-color .3s ease-in;
+	text-align: center;
+
+	&:hover,
+	&:focus {
+		background-color: lighten($current-color, 7%);
+	}
+
+	&:active {
+		background-color: darken($current-color, 7%);
+	}
+
+	&--large {
+		padding: 1.100em 45px;
+		font-family: $catamaran-Bold;
+
+		@include phone-wide {
+			position: fixed;
+			bottom: 0%;
+			right: 0;
+			left: 0;
+			border-radius: 0;
+			width: 100%;
+		}
+	}
+
+	&--small {
+		font-size: 15px;
+		padding: .9em 22px;
+		font-family: $catamaran-Bold;
+
+		@include phone-wide {
+			width: 100%;
+		}
+	}
+
+}

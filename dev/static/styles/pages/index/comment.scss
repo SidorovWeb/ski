@@ -1,0 +1,145 @@
+.s-comment {
+	padding: 150px 0 138px 0;
+
+	@include laptop {
+		padding: 50px 0 50px 0;
+	}
+
+	@include phablet {
+		padding: 30px 0 30px 0;
+	}
+}
+
+.comment {
+	&__title {
+		margin-bottom: 45px;
+		color: $mine-shaft;
+		text-align: center;
+
+		@include phablet {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__content {
+		max-width: 820px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__icon-quote-left,
+	&__icon-quote-right {
+		position: absolute;
+		width: 50px;
+		height: 36px;
+
+		@include phablet {
+			width: 30px;
+			height: 26px;
+		}
+	}
+
+	&__icon-quote-left {
+		bottom: 30px;
+		left: 0;
+	}
+
+	&__icon-quote-right {
+		bottom: 30px;
+		right: 0;
+	}
+
+	&__client {
+		position: relative;
+		margin-bottom: 24px;
+		max-width: 245px;
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include phablet {
+			margin-bottom: 16px;
+		}
+
+		&-img {
+			width: 130px;
+			height: 130px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+
+		&-name {
+			color: $mine-shaft;
+			font-family: $catamaran-black;
+			font-size: 18px;
+			letter-spacing: 0.18px;
+			text-transform: uppercase;
+		}
+	}
+
+	&__text {
+		color: $scorpion;
+		font-family: $Muli-Light;
+		font-size: 18px;
+		line-height: 32px;
+		letter-spacing: 0.18px;
+
+		@include phablet {
+			font-size: 16px;
+			line-height: 25px;
+		}
+	}
+
+	&__slider {
+		min-height: 260px;
+	}
+
+	&-dots {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		bottom: -60px;
+		left: 0;
+		right: 0;
+
+		@include phablet {
+			bottom: -35px;
+		}
+
+		@include not-last {
+			margin-right: 18px;
+		}
+
+		&__link {
+			width: 13px;
+			height: 13px;
+			background-color: #cdd4db;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background-color .3s ease-in;
+		}
+
+		& .slick-active {
+			a {
+				background-color: $current-color;
+			}
+		}
+	}
+}
+
+.comment {
+	& .slick-slider {
+		margin-bottom: 80px;
+
+		@include phablet {
+			margin-bottom: 50px;
+		}
+	}
+}

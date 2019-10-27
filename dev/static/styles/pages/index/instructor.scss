@@ -1,0 +1,92 @@
+.instructors {
+	padding-top: 144px;
+	padding-bottom: 165px;
+
+	@include desktop {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	@include laptop {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	@include phablet {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__col {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		padding-top: 40px;
+		text-transform: uppercase;
+
+		@include desktop {
+			flex-basis: 50%;
+			margin-bottom: 30px;
+		}
+
+		@include tablet {
+			flex-basis: 100%;
+		}
+
+		@include phablet {
+			margin-bottom: 15px;
+			padding-top: 20px;
+		}
+	}
+
+	&__img {
+		height: 240px;
+		width: 240px;
+		border-radius: 50%;
+		margin-bottom: 28px;
+		overflow: hidden;
+
+		@include phablet {
+			height: 140px;
+			width: 140px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__title {
+		color: $mine-shaft;
+		text-align: center;
+	}
+
+	&__prof {
+		color: $scorpion;
+		font-family: $Muli-Light;
+		font-size: 14px;
+		letter-spacing: 0.14px;
+		margin-bottom: 12px;
+
+		@include phablet {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__name {
+		color: $mine-shaft;
+		font-family: $catamaran-black;
+		font-size: 24px;
+		line-height: 1.4;
+		letter-spacing: 0.24px;
+		text-transform: uppercase;
+
+		@include phablet {
+			font-size: 18px;
+		}
+	}
+}

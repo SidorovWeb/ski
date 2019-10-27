@@ -1,0 +1,170 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+
+html {
+  height: 100%;
+  font-size: 10px;
+  line-height: 1.15;
+}
+
+body {
+  min-width: 320px;
+  height: 100%;
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.375em;
+  font-family: $main-ff;
+  color: $current-text;
+  background-color: $bg-body;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+
+  &.isActive {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  display: block;
+  color: $current-color;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea {
+  vertical-align: middle;
+}
+
+textarea {
+  resize: none;
+}
+
+section {
+  position: relative;
+}
+
+input,
+select,
+button {
+  outline: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: $content-size;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+img:not([alt]),
+label:not([for]),
+input[type="submit"]:not([value]) {
+  outline: 2px solid red;
+}
+
+ul>*:not(li),
+ol>*:not(li),
+dl>*:not(dt):not(dd) {
+  outline: 2px solid red;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// fix jump slider-slick.....................
+
+.comment__slider.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.comment__slider .comment__item {
+  display: none;
+}
+
+
+.comment__slider.comment__item:first-child {
+  display: block;
+  visibility: hidden;
+}
+
+
+.comment__slider.slick-initialized .comment__item {
+  display: block;
+  visibility: visible !important;
+}
+
+//Модули
+@import "../../modules/modules.scss";
+
+// index.html
+@import "pages/index/offer.scss";
+@import "pages/index/gallery.scss";
+@import "pages/index/instructor.scss";
+@import "pages/index/about.scss";
+@import "pages/index/comment.scss";

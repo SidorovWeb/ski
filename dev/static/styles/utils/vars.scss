@@ -1,0 +1,103 @@
+/*********************
+COLORS
+*********************/
+
+$white: #ffffff;
+$black: #000000;
+$bg-body: #f6f6f6;
+$current-text: #2b2b2b;
+$current-color: #ff690f;
+$header-bg: #355a88;
+$mine-shaft: #333333;
+$scorpion: #565656;
+
+/*********************
+SIZES
+*********************/
+$base-font-size: 16px;
+
+/*********************
+FONT
+*********************/
+$main-ff: Geneva,
+Arial,
+Helvetica,
+sans-serif;
+
+$multi-Bold: Muli-Bold;
+$Multi-Regular: Muli-Regular;
+$Muli-Light: Muli-Light;
+$catamaran-Bold: Catamaran-Bold;
+$catamaran-black: Catamaran-Black;
+/*********************
+BREAKPOINTS
+*********************/
+
+$phone : 400px;
+$phone-wide : 480px;
+$phablet : 568px;
+$tablet-small: 640px;
+$tablet : 768px;
+$tablet-wide : 1024px;
+$laptop: 992px;
+$desktop : 1280px;
+$desktop-wide: 1440px;
+
+/*********************
+CONTAINER
+*********************/
+$content-size: 1290px;
+
+@mixin desktop-wide {
+	@media (max-width: $desktop-wide) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (max-width: $desktop) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (max-width: $laptop) {
+		@content;
+	}
+}
+
+@mixin tablet-wide {
+	@media (max-width: $tablet-wide) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin tablet-small {
+	@media (max-width: $tablet-small) {
+		@content;
+	}
+}
+
+@mixin phablet {
+	@media (max-width: $phablet) {
+		@content;
+	}
+}
+
+@mixin phone-wide {
+	@media (max-width: $phone-wide) {
+		@content;
+	}
+}
+
+@mixin phone {
+	@media (max-width: 320px) {
+		@content;
+	}
+}

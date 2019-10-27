@@ -1,0 +1,66 @@
+.s-offer {
+	padding-top: 70px;
+	padding-bottom: 160px;
+
+	@include desktop {
+		padding-bottom: 70px;
+	}
+
+	@include laptop {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	@include phablet {
+		padding-top: 30px;
+	}
+}
+
+.offer {
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include tablet {
+			@include not-last {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__col {
+		flex: 1;
+	}
+
+	&__block {
+		max-width: 930px;
+		margin: 0 auto;
+		margin-bottom: 64px;
+		text-align: center;
+
+		@include phablet {
+			margin-bottom: 44px;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		color: $mine-shaft;
+		margin-bottom: 14px;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 32px;
+		font-family: $Muli-Light;
+		color: $scorpion;
+		letter-spacing: 0.18px;
+
+		@include phablet {
+			font-size: 16px;
+			text-align: left;
+			line-height: 25px;
+		}
+	}
+}

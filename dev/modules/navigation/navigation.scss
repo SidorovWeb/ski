@@ -1,0 +1,73 @@
+.navigation {
+	@include tablet {
+		&.isActive {
+			.navigation__list {
+				display: flex;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+
+		@include not-last {
+			margin-right: 42.3px;
+
+			@include tablet-wide {
+				margin-right: 22.3px;
+			}
+
+			@include tablet {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+		}
+
+		@include tablet {
+			display: none;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba($header-bg, .9);
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			transition: all .3s ease-in;
+		}
+	}
+
+	&__item {
+		@include tablet {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__link {
+		color: $white;
+		letter-spacing: 0.16px;
+		line-height: 1.5;
+		transition: opacity .2s ease-in;
+		opacity: 1;
+		font-family: $multi-Bold;
+		transition: color .3s ease-in;
+
+		&:hover,
+		&:focus {
+			color: $current-color;
+		}
+
+		&:active {
+			color: darken($current-color, 7%);
+		}
+
+		@include tablet {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,160 @@
+.footer {
+	background-color: $mine-shaft;
+	flex: 0 0 auto;
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__header {
+		margin-bottom: 42px;
+
+		@include tablet {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 35%;
+		padding: 90px 15px 100px 15px;
+		flex-basis: 35%;
+
+		@include laptop {
+			padding: 50px 15px 50px 15px;
+		}
+
+		@include phablet {
+			padding: 30px 15px 40px 15px;
+		}
+
+		@include tablet {
+			align-items: flex-start;
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+
+		&-container {
+			max-width: 380px;
+
+			@include tablet {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__title {
+		color: $white;
+		text-align: center;
+
+		@include tablet {
+			text-align: left;
+		}
+	}
+
+	&__body {
+		padding-left: 10px;
+
+		@include tablet {
+			padding-left: 0;
+		}
+	}
+
+	&__list {
+		@include not-last {
+			margin-bottom: 31px;
+
+			@include tablet {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 33px;
+	}
+
+	&__info {
+		font-size: 18px;
+		line-height: 26px;
+		font-family: $Muli-Light;
+		color: $white;
+		text-transform: uppercase;
+		letter-spacing: 0.18px;
+
+		@include laptop {
+			font-size: 16px;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 5px;
+		left: 0;
+		width: 18px;
+		height: 18px;
+		fill: $current-color;
+	}
+
+	&__bootom {
+		padding-top: 63px;
+		padding-left: 4px;
+
+		@include tablet {
+			padding-top: 40px;
+		}
+	}
+
+	&__social {
+
+		&-icon {
+			width: 30px;
+			height: 30px;
+			opacity: 0.5;
+			fill: #f7f7f7;
+
+			@include laptop {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	&__map {
+		max-width: 65%;
+		flex-basis: 65%;
+
+		@include tablet {
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+
+		@include phone-wide {
+			padding-bottom: 54px;
+		}
+	}
+}
+
+.social {
+	&__list {
+		display: flex;
+		align-items: center;
+
+		@include not-last {
+			margin-right: 28px;
+		}
+	}
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+
+	@include tablet {
+		height: 400px;
+	}
+}
